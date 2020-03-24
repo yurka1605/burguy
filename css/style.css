@@ -82,6 +82,7 @@ li {
     line-height: 13px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
+    color: #000000;
 }
 .header__nav {
     display: flex;
