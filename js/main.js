@@ -38,7 +38,8 @@ $('.amount__controls').click(function() {
 
 $('.products__btn').click(function () {
     var val = parseInt($(this).children('.products__item_price').text(), 10);
-    openPopup(val);
+    var name = $(this).prev().children('h4').text();
+    openPopup(val, name);
 });
 
 $('.popup .submit').on('click', function () {
@@ -50,12 +51,13 @@ $('.popup-bg').on('click', function () {
     closePopup();
 });
 
-function openPopup(val) {
+function openPopup(val, name) {
     if (val > 999) {
         var hundred = parseInt(val/1000, 10);
         val = `${ hundred } ${ val - hundred * 1000 }`;
     }
     $('.popup .summ').html(val);
+    $('.popup .product__name').html(name);
     $('body').addClass('active-popup');
 }
 

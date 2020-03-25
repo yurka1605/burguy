@@ -131,10 +131,10 @@ main{
     padding-bottom: 25px;
 }
 .banner__title {
-    font-size: 212px;
+    font-size: 175px;
     line-height: 209px;
     text-transform: uppercase;
-    max-width: 1660px;
+    max-width: 1450px;
 }
 .about {
     display: flex;
@@ -380,6 +380,16 @@ label {
 .popup .form__subtitle {
     max-width: 100%;
     margin-bottom: 20px;
+}
+.popup .product__name {
+    color: black;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: 3px solid black;
+    margin: 10px 0;
+    display: block;
+    width: fit-content;
+    font-weight: 900;
 }
 .form__price {
     display: flex;
