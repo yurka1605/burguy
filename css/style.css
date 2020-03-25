@@ -245,11 +245,7 @@ main{
     margin-bottom: 40px;
     text-align: center;
 }
-.products__img img {
-    max-width: 502px;
-    height: 338px;
-    transform: translateX(-16%);
-}
+.products__img img {max-height: 338px;}
 .products__info {
     display: flex;
     justify-content: space-between;
