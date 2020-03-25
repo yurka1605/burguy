@@ -100,7 +100,7 @@
                             <h4>Свинина без специй</h4>
                             <span>Упаковка 70 гр</span> 
                         </div>
-                        <button class="products__btn">Заказать 80₽</button>
+                        <button class="products__btn">Заказать <span class="products__item_price">80₽</span></button>
                     </div>
                 </div>
                 <div class="products__item">
@@ -112,7 +112,7 @@
                             <h4>Свинина без специй</h4>
                             <span>Упаковка 70 гр</span> 
                         </div>
-                        <button class="products__btn">Заказать 80₽</button>
+                        <button class="products__btn">Заказать <span class="products__item_price">80</span>₽</button>
                     </div>
                 </div>
                 <div class="products__item">
@@ -124,7 +124,7 @@
                             <h4>Свинина без специй</h4>
                             <span>Упаковка 70 гр</span> 
                         </div>
-                        <button class="products__btn">Заказать 80₽</button>
+                        <button class="products__btn">Заказать <span class="products__item_price">80</span>₽</button>
                     </div>
                 </div>
                 <div class="products__item">
@@ -136,7 +136,7 @@
                             <h4>Свинина без специй</h4>
                             <span>Упаковка 70 гр</span> 
                         </div>
-                        <button class="products__btn">Заказать 80₽</button>
+                        <button class="products__btn">Заказать <span class="products__item_price">80</span>₽</button>
                     </div>
                 </div>
                 <div class="products__item">
@@ -148,7 +148,7 @@
                             <h4>Свинина без специй</h4>
                             <span>Упаковка 70 гр</span> 
                         </div>
-                        <button class="products__btn">Заказать 80₽</button>
+                        <button class="products__btn">Заказать <span class="products__item_price">80</span>₽</button>
                     </div>
                 </div>
                 <div class="products__item">
@@ -160,7 +160,7 @@
                             <h4>Свинина без специй</h4>
                             <span>Упаковка 70 гр</span> 
                         </div>
-                        <button class="products__btn">Заказать 80₽</button>
+                        <button class="products__btn">Заказать <span class="products__item_price">80</span>₽</button>
                     </div>
                 </div>
             </div>
@@ -207,6 +207,41 @@
                 <p>г. Ульяновск, Московское шоссе 68А</p>
             </div>
         </footer>
+        <section class="popup-bg"></section>
+        <section class="popup">
+            <div class="contacts__form">
+                <h4 class="form__title">Оформление заказа</h4>
+                <span class="product__name"></span>
+                <div class="form__price">
+                    <div class="amount">
+                        <span class="amount__controls minus">-</span>
+                        <span class="amount__num">5</span>
+                        <span class="amount__controls plus">+</span>
+                    </div>
+                    <div class="product__price">
+                        <span class="summ"></span>
+                        <span>руб.</span>
+                    </div>
+                </div>
+                <span class="form__subtitle">Стоимость доставки рассчитывается индивидуально в каждом конкретном случае</span>
+                <div class="form__controls">
+                    <div class="form__control">
+                        <input type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="form__control">
+                        <input type="text" placeholder="Телефон" id="tel1">
+                    </div>
+                    <div class="form__control">
+                        <input type="text" placeholder="E-mail">
+                    </div>
+                    <div class="form__control">
+                        <input type="checkbox" id="check1">
+                        <label for="check1"> Я ознакомлен(-а) с Политикой конфиденциальности, даю согласие на обработку персональных данных</label>
+                    </div>
+                </div>
+                <button type="submit" class="submit">Отправить</button>
+            </div>
+        </section>
     </main>
     <script src="./js/jquery.js"></script>
     <script src="./js/jquery.maskedinput.js"></script>

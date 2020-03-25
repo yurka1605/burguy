@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    $('#tel').mask('+7 (999) 999-99-99');
+    $('#tel, #tel1').mask('+7 (999) 999-99-99');
 });
 $(window).scroll(function() {
     var top = $(window).scrollTop();
@@ -24,3 +24,44 @@ $('.nav__item:not(.active)').click(function(e) {
     var top = $(`section.${ className }`).offset().top - 80;
     $('html, body').animate({scrollTop: top}, 300);
 });
+
+$('.amount__controls').click(function() {
+    var amountControl = $('.amount__num');
+    var val = parseInt($(amountControl).text(), 10);
+
+    if ($(this).hasClass('plus')) {
+        $(amountControl).html(val === 100 ? val : val + 5);
+    } else {
+        $(amountControl).html(val === 5  ? val : val - 5);
+    }
+});
+
+$('.products__btn').click(function () {
+    var val = parseInt($(this).children('.products__item_price').text(), 10);
+    openPopup(val);
+});
+
+$('.popup .submit').on('click', function () {
+    // собираем данные с формы и отправляем
+    closePopup();
+});
+
+$('.popup-bg').on('click', function () {
+    closePopup();
+});
+
+function openPopup(val) {
+    if (val > 999) {
+        var hundred = parseInt(val/1000, 10);
+        val = `${ hundred } ${ val - hundred * 1000 }`;
+    }
+    $('.popup .summ').html(val);
+    $('body').addClass('active-popup');
+}
+
+function closePopup() {
+    $('body').removeClass('active-popup');
+    // если захотеть можно почистить форму, но какой смысл, 
+    // если те сумма вбивается автоматом и полезнее будет оставить данные
+    // чтобы не вводить повторно 
+}
