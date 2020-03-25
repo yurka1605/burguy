@@ -44,10 +44,17 @@ $('.products__btn').click(function () {
 
 $('.popup .submit').on('click', function () {
     // собираем данные с формы и отправляем
-    closePopup();
+    const name = $('#name1').val();
+    const mail = $('#mail1').val();
+    const tel = $('#tel1').val();
+    $('#check1').prop("checked");
+
+    if (name !== '' && mail !== '' && tel !== '' && $('#check1').prop("checked")) {
+        $('.popup__thanks').addClass('active');
+    }
 });
 
-$('.popup-bg').on('click', function () {
+$('.popup-bg, .popup__close').on('click', function () {
     closePopup();
 });
 
@@ -63,6 +70,7 @@ function openPopup(val, name) {
 
 function closePopup() {
     $('body').removeClass('active-popup');
+    $('.popup__thanks').removeClass('active');
     // если захотеть можно почистить форму, но какой смысл, 
     // если те сумма вбивается автоматом и полезнее будет оставить данные
     // чтобы не вводить повторно 

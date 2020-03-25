@@ -46,6 +46,7 @@ li {
     padding: 0 62px;
     min-width: 100vw;
     background-color: #ffffff;
+    z-index: 1;
 }
 .header__left {
     display: flex;
@@ -115,11 +116,8 @@ main{
     padding-top: 75px; 
 }
 .banner {
+    display: flex;
     padding: 100px 62px 190px 62px;
-    background-image: url('../img/about.png');
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
 }
 .banner__head {
     font-weight: 500;
@@ -131,14 +129,26 @@ main{
     padding-bottom: 25px;
 }
 .banner__title {
-    font-size: 175px;
+    font-size: 150px;
     line-height: 209px;
     text-transform: uppercase;
     max-width: 1450px;
 }
+.banner__text {
+    max-width: 70%;
+}
+.banner__img {
+    max-width: 30%;
+    display: flex;
+    align-items: center;
+}
+.banner__img img {
+    max-width: 100%;
+}
 .about {
     display: flex;
     align-items: flex-end;
+    margin-top: 80px;
     margin-bottom: 170px;
 }
 .about img {
@@ -147,7 +157,7 @@ main{
     margin-right: 221px;
 }
 .about__title {
-    font-size: 42px;
+    font-size: 36px;
     max-width: 812px;
 }
 .about__desc {
@@ -194,8 +204,11 @@ main{
     background-repeat: no-repeat;
     background-size: auto 100%;
 }
+.sostav__block {
+    max-width: 30%;
+}
 .sostav h2 {
-    font-size: 42px;
+    font-size: 36px;
     margin-bottom: 70px;
 }
 .sostav__text {
@@ -232,6 +245,11 @@ main{
     margin-bottom: 40px;
     text-align: center;
 }
+.products__img img {
+    max-width: 502px;
+    height: 338px;
+    transform: translateX(-16%);
+}
 .products__info {
     display: flex;
     justify-content: space-between;
@@ -263,7 +281,7 @@ main{
     padding: 70px 196px 195px 62px;
 }
 .contacts h2 {
-    font-size: 212px;
+    font-size: 150px;
     line-height: 1;
     text-transform: uppercase;
     margin-bottom: 140px;
@@ -276,7 +294,7 @@ main{
     width: 50%;
 }
 .contacts__info h3 {
-    font-size: 42px;
+    font-size: 36px;
     margin-bottom: 110px;
 }
 .form__title {
@@ -364,6 +382,7 @@ label {
     height: auto;
     padding: 50px 100px;
     background-color: #ffffff;
+    z-index: 3;
 }
 .popup .form__title {
     font-family: 'Manrope';
@@ -429,6 +448,39 @@ label {
     width: fit-content;
     min-width: 50%;
 }
+.popup__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 42px;
+    color: black;
+    cursor: pointer;
+    line-height: 1;
+    user-select: none;
+    z-index: 1;
+}
+.popup__close:hover {
+    color: #868686;
+}
+.popup__thanks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 0 100px;
+    opacity: 0;
+}
+.popup__thanks.active {
+    display: flex;
+    opacity: 1;
+}
 .popup-bg {
     display: none;
     position: fixed;
@@ -440,6 +492,7 @@ label {
     width: 100vw;
     background-color: #000000;
     opacity: 0.6;
+    z-index: 2;
 }
 body.active-popup {
     overflow: hidden;
