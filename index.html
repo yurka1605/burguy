@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Буржуй</title>
+    <title>Мясные снеки &laquo;Буржуй&raquo;</title>
+<meta name="yandex-verification" content="cdb80e4e79d1a0bc" />    
 </head>
 <body>
     <main>
@@ -33,14 +34,32 @@
                         </li>
                     </ul>
                 </nav>
+                <div class="mobile__controls">
+                    <div class="header__cartoon">
+                        <div class="amount__products_mobile">0</div>
+                        <img src="./img/cartoon.png" alt="cartoon">
+                        <div class="empty-basket">Корзина пуста</div>
+                    </div>
+                    <div class="burger-btn">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+                </div>
             </div>
             <div class="header__right">
                 <a href="tel:+74222760445">+7 (8422) 76-04-45</a>
+                <div class="header__cartoon">
+                    <div class="amount__products">0</div>
+                    <img src="./img/cartoon.png" alt="cartoon">
+                    <div class="empty-basket">Корзина пуста</div>
+                </div>
             </div>
         </header>
         <section class="banner">
             <div class="banner__text">
                 <div class="banner__head">Мясные снеки «Буржуй»</div>
+                <img src="./img/about.png" alt="about">
                 <h1 class="banner__title">Для тех, кто любит мясо.</h1>
             </div>
             <div class="banner__img">
@@ -60,6 +79,7 @@
                         <p>Уникальная рецептура продукта достигается благодаря использованию только высококачественных натуральных специй из Австрии.</p>
                     </div>
                 </div>
+                <img src="./img/aboute-1.png" alt="about">
                 <div class="about__blocks">
                     <div class="about__block">
                         <h4 class="about__title">Вакуумная упаковка</h4>
@@ -85,6 +105,7 @@
                     соль и натуральные специи. Без добавления ГМО, 
                     искусственных красителей и ароматизаторов.
                 </p>
+                <img src="./img/sostav.png" alt="sostav">
                 <div class="sostav__sostav">
                     <h4 class="sostav__title">Содержание в 100 гр:</h4>
                     <span class="sostav__subtitle">не менее</span>
@@ -107,7 +128,7 @@
                             <h4>Свинина BBQ</h4>
                             <span>Упаковка 25 гр</span> 
                         </div>
-                        <button class="products__btn">Заказать <span class="products__item_price">80₽</span></button>
+                        <button class="products__btn">Заказать <span class="products__item_price">80</span>₽</button>
                     </div>
                 </div>
                 <div class="products__item">
@@ -143,7 +164,7 @@
                             <h4>Говядина BBQ</h4>
                             <span>Упаковка 25 гр</span> 
                         </div>
-                        <button class="products__btn">Заказать <span class="products__item_price">90₽</span></button>
+                        <button class="products__btn">Заказать <span class="products__item_price">90</span>₽</button>
                     </div>
                 </div>
                 <div class="products__item">
@@ -175,6 +196,9 @@
         <section class="contacts">
             <h2>Оптовым покупателям.</h2>
             <div class="contacts__block">
+                <div class="contact__img">
+                    <img src="./img/contact.jpg" alt="contact">
+                </div>
                 <div class="contacts__info">
                     <h3>Гибкая ценовая политика. Система индивидуальных скидок оговариваются с каждым клиентом отдельно и зависят от налаженных партнёрских отношений.</h3>
                     <div class="contacts__form">
@@ -182,13 +206,13 @@
                         <span class="form__subtitle">Оставте свою заявку, и мы с вами свяжемся в ближайшее время.</span>
                         <div class="form__controls">
                             <div class="form__control">
-                                <input type="text" placeholder="Ваше имя">
+                                <input type="text" placeholder="Ваше имя" id="name">
                             </div>
                             <div class="form__control">
                                 <input type="text" placeholder="Телефон" id="tel">
                             </div>
                             <div class="form__control">
-                                <input type="text" placeholder="E-mail">
+                                <input type="text" placeholder="E-mail" id="mail">
                             </div>
                             <div class="form__control">
                                 <input type="checkbox" id="check">
@@ -227,35 +251,96 @@
                         <span class="amount__controls plus">+</span>
                     </div>
                     <div class="product__price">
+                        <span style="visibility: hidden;" class="price"></span>
                         <span class="summ"></span>
                         <span>руб.</span>
                     </div>
                 </div>
-                <span class="form__subtitle">Стоимость доставки рассчитывается индивидуально в каждом конкретном случае</span>
-                <div class="form__controls">
-                    <div class="form__control">
-                        <input type="text" placeholder="Ваше имя" id="name1">
+                <button type="submit" class="submit">В корзину</button>
+            </div>
+        </div>
+        <div class="cartoon">
+            <div class="cartoon__close">×</div>  
+            <form action="" class="cartoon__form">
+                <h4 class="form__title">Оформление заказа</h4>
+                <ul class="products__list"></ul>
+                <div class="cartoon__wrap">
+                    <div class="form__subtitle">Стоимость доставки рассчитывается индивидуально в каждом конкретном случае</div>
+                    <div class="form__controls">
+                        <div class="form__control">
+                            <input type="text" placeholder="Ваше имя" id="name1">
+                        </div>
+                        <div class="form__control">
+                            <input type="text" placeholder="Телефон" id="tel1">
+                        </div>
+                        <div class="form__control">
+                            <input type="text" placeholder="E-mail" id="mail1">
+                        </div>
+                        <div class="form__control">
+                            <input type="checkbox" id="check1">
+                            <label for="check1"> Я ознакомлен(-а) с Политикой конфиденциальности, даю согласие на обработку персональных данных</label>
+                        </div>
                     </div>
-                    <div class="form__control">
-                        <input type="text" placeholder="Телефон" id="tel1">
-                    </div>
-                    <div class="form__control">
-                        <input type="text" placeholder="E-mail" id="mail1">
-                    </div>
-                    <div class="form__control">
-                        <input type="checkbox" id="check1">
-                        <label for="check1"> Я ознакомлен(-а) с Политикой конфиденциальности, даю согласие на обработку персональных данных</label>
+                    <div class="cartoon__footer">
+                        <button type="submit" class="submit">Отправить</button>
+                        <div class="cartoon__price-all">
+                            <span class="summ__all"></span>
+                            <span>руб.</span>
+                        </div>
                     </div>
                 </div>
-                <button type="submit" class="submit">Отправить</button>
-            </div>
+            </form>
             <div class="popup__thanks">
                 <h4 class="form__title">Спасибо! Мы скоро свяжемся с Вами.</h4>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <div class="menu__close">×</div>
+            <a class="header__logo" href="#">
+                <img src="./img/logo.png" alt="Logo">
+                <span class="logo__text">
+                    <h2>Буржуй</h2>
+                    <span>Premium meat</span>
+                </span>
+            </a>
+            <nav class="header__nav">
+                <ul class="nav__items">
+                    <li data-class="about" class="nav__item">
+                        <a href="#">О продукте</a>
+                    </li>
+                    <li data-class="sostav" class="nav__item">
+                        <a href="#">Состав</a>
+                    </li>
+                    <li data-class="products" class="nav__item">
+                        <a href="#">Ассортимент</a>
+                    </li>
+                    <li data-class="contacts" class="nav__item">
+                        <a href="#">Связаться с нами</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__right">
+                <a href="tel:+74222760445">+7 (8422) 76-04-45</a>
             </div>
         </div>
     </main>
     <script src="./js/jquery.js"></script>
     <script src="./js/jquery.maskedinput.js"></script>
     <script src="./js/main.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(61326496, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/61326496" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 </html>
